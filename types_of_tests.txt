@@ -1,0 +1,20 @@
+https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd
+
+jest js testing framework, runs tests
+rtl javascript testing utility that provides virtual DOM for testing react components
+
+unit tests, integration tests, E2E tests
+
+testing pyramid
+        /---\
+       / E2E \
+      / tests \
+     /_________\
+    /integration\
+   /    tests    \
+  /_______________\
+ /    Unit tests   \
+/___________________\
+
+The more your tests resemble the way your software is used, the more confidence they can give you
+
