@@ -34,3 +34,16 @@ fn: una funcion que contiene lo que se va a testear
 se puede usar .skip y .only en describe
 Se puede anidar los describe() y peuede haber varios por archivo.
 describe no hace que sea un test suite separado, cada archivo es un test suite.
+
+coonvenciones
+------------
+archivos con sufijo .test.js o .test.jsx
+archivos con sufijo .spec.js o .spec.jsx
+archivos con sufijo .js o .jsx que este dentro de carpetas llamadas __tests__ 
+
+se puede usar it o test para hacer los tests
+test('renders correctly', () => {
+it('renders correctly', () => {
+
+fit() es lo mismo que test.only()
+xit() es lo mismo que test.skip()
