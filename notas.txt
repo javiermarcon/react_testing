@@ -20,3 +20,6 @@ watch mode is an option that ew con pass to jest asking to watch files that have
 and execute tests related only to those changed files
 An optimization designed to make your tests run fast regardless on how many tests you have
 
+Si el lugoar de usar test('Greet renders with a name', () => {
+uso test.only('Greet renders with a name', () => { me va a correr solo ese test
+test.skip('Greet renders with a name', () => { me va a omitir este test
