@@ -23,3 +23,14 @@ An optimization designed to make your tests run fast regardless on how many test
 Si el lugoar de usar test('Greet renders with a name', () => {
 uso test.only('Greet renders with a name', () => { me va a correr solo ese test
 test.skip('Greet renders with a name', () => { me va a omitir este test
+
+Agrupar tests
+-------------
+
+describe(name, fn)
+name: el nombre del grupo
+fn: una funcion que contiene lo que se va a testear
+
+se puede usar .skip y .only en describe
+Se puede anidar los describe() y peuede haber varios por archivo.
+describe no hace que sea un test suite separado, cada archivo es un test suite.
