@@ -3,3 +3,11 @@ npx create-react-app . --template typescript
 
 npm test
 // corre los tests en modo escucha
+
+test (name, fn, timeout)
+name: nombre para identificar el test
+fn: funcion que contiene lo que espera testear el test
+timeout: tiemppo a esperar antes de abortar el test (default 5 segundos)
+
+screen permite usar el dom (screen.getByText(/learn react/i) busca el texto learn react)
+expect es como el assert
