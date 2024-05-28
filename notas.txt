@@ -1,0 +1,5 @@
+npx create-react-app . --template typescript
+// crea un proyecto de react en la carpeta local
+
+npm test
+// corre los tests en modo escucha
