@@ -11,3 +11,6 @@ timeout: tiemppo a esperar antes de abortar el test (default 5 segundos)
 
 screen permite usar el dom (screen.getByText(/learn react/i) busca el texto learn react)
 expect es como el assert
+
+En getByText puedo pasr un texto screen.getByText('Hello') o una expresion regular screen.getByText(/hello/i)
+el /i del final es para que no distinga mayusculas y minusculas
