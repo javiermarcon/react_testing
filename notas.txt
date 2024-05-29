@@ -56,3 +56,13 @@ branches coverage: how many of the branches of the control structures (i.e. if s
 function coverage: how many of the functions defined hav been called and finally
 line coverage: how many lines of source code have been tested
 
+assertions
+----------
+
+expect(value)
+the argument should be the value that your code produces
+
+jest.io/docs/using-matchers
+
+Algunos matchers como toBeInTheDocument no son parte de jest, son de una lib adicional llamada jest-dom
+
