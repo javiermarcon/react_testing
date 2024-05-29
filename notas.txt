@@ -163,3 +163,17 @@ getByTitle returns the element that has the matching title attribute
 getByTestId
 -----------
 getByTestId returns the element that has the matching data-testid attribute
+
+Priority Order for Queries
+--------------------------
+"Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
+1) getByRole (si podemos usemos este)
+2) getByLabelText (bueno para form fileds)
+3) getByPlaceholderText
+4) getByText (se puede usar par cosas no interactivas como div o span)
+5) getByDisplayValue
+6) getByAltText
+7) getByTitle
+8) getByTestId (solo se deberia usar cuando el texto no tenga sentido por ejemplo si es dinamico)
+Se deberia hacer los testo con los primeros 5, el 6 y 7 pueden variar de un browser a otro
+
