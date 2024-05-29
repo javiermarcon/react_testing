@@ -160,3 +160,6 @@ getByTitle
 ----------
 getByTitle returns the element that has the matching title attribute
 
+getByTestId
+-----------
+getByTestId returns the element that has the matching data-testid attribute
