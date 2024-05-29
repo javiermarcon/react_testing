@@ -80,3 +80,26 @@ third party code
 code that is not important from an user point of view 
 (ej no testear como se llamo a la funcion sino testear como se mostro el resultado)
 
+RTL queries
+-----------
+Every test we write generally involves the following basic steps
+1) Render the component
+2) Find an element rendered by the component
+3) test against the element found in step 2 which will pass or fail the test
+
+To render the component, we use the render method from RTL (1)
+For assertion, we use expect passing in a value and combine it with a matcher function from jest or jest-dom (3)
+Queries are methods that testing library provides to find elements on the page (2)
+to find a single element on the page, we have
+-getBy...
+-queryBy...
+-findBy...
+to find multiple elements on the page, we have
+-getAllBy...
+-queryAllBy...
+-findAllBy...
+The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally TestId
+
+getBy..
+getBy.. class of queries return the matching node for a query, and throw a descriptive error if no elements match 
+or if more than one match is found
