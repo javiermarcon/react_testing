@@ -136,3 +136,9 @@ getByLabelText
 --------------
 getByLabelText will search for the label that matches the givent text, then find the element associated with that 
 label
+
+getByPlaceholderText
+--------------------
+getByPlaceholderText will search for all elements with a placeholder attribute and find the one that matches the 
+given text
+
