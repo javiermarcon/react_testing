@@ -15,6 +15,9 @@ describe("Application", () => {
         });
         expect(sectionElement).toBeInTheDocument();
 
+        const paragraphElement = screen.getByText('All fields are madatory')
+        expect(paragraphElement).toBeInTheDocument();
+
         const nameElement = screen.getByRole('textbox', {
             name: 'Name'
         });

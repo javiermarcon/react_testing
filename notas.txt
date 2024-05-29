@@ -142,3 +142,7 @@ getByPlaceholderText
 getByPlaceholderText will search for all elements with a placeholder attribute and find the one that matches the 
 given text
 
+getByText
+---------
+getByText will search for all elements that have a text node with textContent matching the given text
+Tipically you'd use this to find a paragraph, div, or span elements
