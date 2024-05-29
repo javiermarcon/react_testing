@@ -120,3 +120,14 @@ To use an anchor element as a button in the navbar, you coan add role='button'
 
 para saber que role tien cada tipo de widget, puedo ir a https://testing-library.com/docs/queries/byrole y clickear 
 en "a table of HTML elements with their default and desired roles" (https://www.w3.org/TR/html-aria/#docconformance)
+
+getByRole Options
+-----------------
+
+Name:
+The accessible name is for simple cases equal to 
+1) the label of a form element
+2) the text content for a button or
+3) the value of the aria-label attribute
+
+getByRole Options: name, level, hidden, selected, checked, pressed
