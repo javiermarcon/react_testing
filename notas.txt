@@ -47,3 +47,12 @@ it('renders correctly', () => {
 
 fit() es lo mismo que test.only()
 xit() es lo mismo que test.skip()
+
+code coverage
+-------------
+
+statement coverage: how many of the statements in the software code have been executed
+branches coverage: how many of the branches of the control structures (i.e. if statement) have been executed
+function coverage: how many of the functions defined hav been called and finally
+line coverage: how many lines of source code have been tested
+
