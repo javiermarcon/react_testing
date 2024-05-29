@@ -66,3 +66,17 @@ jest.io/docs/using-matchers
 
 Algunos matchers como toBeInTheDocument no son parte de jest, son de una lib adicional llamada jest-dom
 
+what to test
+------------
+test comopnent renders
+test comopnent renders with props
+test component renders in different states (ej si depede de si el usuario esta logueado)
+test component reacts to events
+
+what not to test
+----------------
+implementation details
+third party code
+code that is not important from an user point of view 
+(ej no testear como se llamo a la funcion sino testear como se mostro el resultado)
+
