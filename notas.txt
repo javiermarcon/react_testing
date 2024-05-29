@@ -177,3 +177,7 @@ Priority Order for Queries
 8) getByTestId (solo se deberia usar cuando el texto no tenga sentido por ejemplo si es dinamico)
 Se deberia hacer los testo con los primeros 5, el 6 y 7 pueden variar de un browser a otro
 
+RTL getAllBy Queries
+--------------------
+Find multiple elements in the DOM
+getAllBy returns an array of all matching nodes for a query, and throws an error if no elements match
