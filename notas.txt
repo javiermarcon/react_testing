@@ -247,3 +247,11 @@ Debugging
 ---------
 screen.debug() permite debuguear mostrando un arbol formateado del dom, en cualquer momento del test
 logRoles muestra los roles implicitos del dom tree
+
+testing Playground
+------------------
+La extension testing playground de google permite obtener la mejor forma de hacer query
+(https://chromewebstore.google.com/detail/testing-playground/hejbmebodbijjdhflfknehhcgaklhano)
+un a vez instalada arir debugger, ir a la pestaña testing playground, hacer hover del item o
+seleccionar el widget de la pestaña de elementos, y va a aparecer el query sugerido, 
+ademas de diferentes queries basados en prioridad
