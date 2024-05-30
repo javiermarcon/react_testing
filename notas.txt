@@ -203,3 +203,15 @@ textMatch - custom function
 <div>Hello World</div>
 screen.getByText((content) => content.startsWith('Hello'))
 
+queryBy and queryAllBy
+----------------------
+
+queryBy:
+- Returns the matching node for a query, and returns null if no elements match
+- uselful for asserting an element is not present
+- Throws an error if more than one match is found
+
+queryAllBy:
+- Returns an array of all matching nodes for a query, and returns an empty array if no elements match
+
+Eso aplica a todos los queryBy  y queryAllBy (Role, LabelText, PlaceholderText, etc.)
