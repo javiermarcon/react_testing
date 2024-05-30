@@ -18,6 +18,15 @@ describe("Application", () => {
         const paragraphElement = screen.getByText('All fields are madatory')
         expect(paragraphElement).toBeInTheDocument();
 
+        const paragraphElement1 = screen.getByText('fields are madatory', {exact: false})
+        expect(paragraphElement1).toBeInTheDocument();
+        
+        const paragraphElement2 = screen.getByText(/^All fields are madatory$/)
+        expect(paragraphElement2).toBeInTheDocument();
+
+        const paragraphElement3 = screen.getByText((content) => content.startsWith('All fields are madatory'))
+        expect(paragraphElement3).toBeInTheDocument();
+
         const closeElement = screen.getByTitle('close')
         expect(closeElement).toBeInTheDocument();
 
