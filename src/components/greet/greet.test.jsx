@@ -9,7 +9,7 @@ import { Greet } from './greet'
 describe('Greet', () => {
     test('renders correctly', () => {
         render(<Greet />)
-        const textElement = screen.getByText('Hello')
+        const textElement = screen.getByText('Hello guest')
         expect(textElement).toBeInTheDocument()
     })
     
