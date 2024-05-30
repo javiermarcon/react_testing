@@ -242,3 +242,8 @@ const {container} = render(<MyComponent />)
 const foo = container.querySelector('[data-foo="bar"]')
 
 no se recomienda usar queries manualses por class, etc. porque esos atributos no son visibles por el usuario
+
+Debugging
+---------
+screen.debug() permite debuguear mostrando un arbol formateado del dom, en cualquer momento del test
+logRoles muestra los roles implicitos del dom tree
