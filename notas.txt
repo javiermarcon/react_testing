@@ -276,3 +276,23 @@ the selection and value on the element are mainpulated as they type.
 - user-event allows you to describe a user interaction instead of a concrete event. It adds visibility and
 intractability checks along the way and manipulates the DOM just ike a user interaction in the browser would.
 It factors that the browser e.g. wouldn't let a user click a hidden element or type in a disabled box.
+
+Pointer interactions
+
+Convenience APIs:
+click() no es un pointer API, en una convenience API que llama a un pointer API.
+Convenience APIs es lo que usamos cuando escribimos tests
+
+interacciones de mouse: 
+clicks: click(), dblClick(), tripleClick()
+movimiento: hover(), unhover()
+puede usarse para testear si aparece/desaparece un tooltip o testear estilos hover de elementos
+
+Pointer APIs:
+los pointer APIs son interacciones de mas bajo nivel
+pointer({keys: '[MouseLeft]'}) // simula presionar el boton izquierdo del mouse
+pointer({keys: '[MouseLeft][MouseRight]'}) // simula click de boton izquierdo del mouse seguido
+// de un click de boton derecho del mouse
+pointer('[MouseLeft][MouseRight]') // se le puede pasar un string si keys es el unico parametro
+pointer('[MouseLeft>]') // presionar el boton izquierdo sin soltarlo
+pointer('[/MouseLeft]') // soltar el boton presionado antes
