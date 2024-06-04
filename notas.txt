@@ -399,4 +399,10 @@ const incrementHanler = jest.fn()
 
 Mocking HTTP requests
 ---------------------
-Para mockear los requests http se usa la libreria msw (se pobtiene de mswjs.io)
+Para mockear los requests http se usa la libreria msw
+Para insalar msw ir a https://mswjs.io/ => Docs => Getting Started => install 
+(https://mswjs.io/docs/getting-started)
+npm install msw@latest --save-dev
+
+Despues copiar la parte de integrate
+
