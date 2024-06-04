@@ -380,3 +380,10 @@ testing-library.com -> Docs -> Frameworks -> React Testing Library -> Setup -> C
 
 Seteando ese wrapper e importando del wrapper que seteamos, nos evitamos poner el wrapper en 
 cada test.
+
+Custom React Hooks
+------------------
+
+Los hooks no se pueden renderizar como widgets, por eso hay que importar renderHook
+los hooks no tienen dom, renderhook devuelve un objeto al que le miramos el result
+y el result tiene un current que tien todas las propiedades
