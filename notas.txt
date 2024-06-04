@@ -387,3 +387,7 @@ Custom React Hooks
 Los hooks no se pueden renderizar como widgets, por eso hay que importar renderHook
 los hooks no tienen dom, renderhook devuelve un objeto al que le miramos el result
 y el result tiene un current que tien todas las propiedades
+
+Act Utility
+-----------
+Act es una funcion que se asegura de que se hicieron todos los updates anted de que se hagan los asserts.
