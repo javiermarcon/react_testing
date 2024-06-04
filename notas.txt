@@ -278,6 +278,7 @@ intractability checks along the way and manipulates the DOM just ike a user inte
 It factors that the browser e.g. wouldn't let a user click a hidden element or type in a disabled box.
 
 Pointer interactions
+--------------------
 
 Convenience APIs:
 click() no es un pointer API, en una convenience API que llama a un pointer API.
@@ -296,3 +297,69 @@ pointer({keys: '[MouseLeft][MouseRight]'}) // simula click de boton izquierdo de
 pointer('[MouseLeft][MouseRight]') // se le puede pasar un string si keys es el unico parametro
 pointer('[MouseLeft>]') // presionar el boton izquierdo sin soltarlo
 pointer('[/MouseLeft]') // soltar el boton presionado antes
+
+Keyboard interactions
+---------------------
+
+Utility API:
+type() // escribir
+clear() // clear an editable element
+    test('clear', async () => {
+        render(<textarea defaultValue="Hello World!!" />)
+        await userEvent.clear(screen.getByRole('textbox'))
+        expect(screen.getByRole('textbox')).toHaveValue('')
+    })
+selectOptions() // permite seleccionar elementos
+    test('selectOptions', async () => {
+        render (
+            <select multiple>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+            </select>
+        )
+        //con selectOption puedo seleccionar por value (1) o su etiqueta (C)
+        await userEvent.selectOptions(screen.getByRole('listbox'), ['1', 'C'])
+        expect(screen.getByRole('option', {name: 'A'}).selected).toBe(true)
+        expect(screen.getByRole('option', {name: 'B'}).selected).toBe(false)
+        expect(screen.getByRole('option', {name: 'C'}).selected).toBe(true)
+    })
+deselectOptions() // permite des seleccionar elementos
+    test('selectOptions', async () => {
+        render (
+            <select multiple>
+                <option value="1">A</option>
+                <option value="2" selected>B</option>
+                <option value="3">C</option>
+            </select>
+        )
+        await userEvent.deselectOptions(screen.getByRole('listbox'), '2')
+        expect(screen.getByText('B').selected).toBe(false)
+    })
+upload() // simula que un usuario hizo click y subio archifo con un file dialog.
+    test('upload file', async () => {
+        render (
+            <div>
+                <label htmlfor="file-uploader">Upload file:</label>
+                <input id="file-uploader" type="file" />
+            </div>,
+        )
+        const file = new File(['hello'], 'hello.png', {type: 'image/png'})
+        const input = screen.getByLabelText(/upload file/i)
+        await userEvent.upload(input, file)
+        expect(input.files[0]).toBe(file)
+        expect(input.files.item(0)).toBe(file)
+        expect(input.files).toHaveLenght(1)
+    })
+
+Convenience API:
+tab()
+
+Clipboard APIs:
+copy()
+cut()
+paste()
+
+Keyboard API (low level):
+keyboard('foo') // translates to: f, o, o
+keyboard('{Shift}A{/Shift}') // translates to: Shift(down), A, Shift(up)
