@@ -363,3 +363,11 @@ paste()
 Keyboard API (low level):
 keyboard('foo') // translates to: f, o, o
 keyboard('{Shift}A{/Shift}') // translates to: Shift(down), A, Shift(up)
+
+Providers
+---------
+
+Material UI provee widgets
+npm install @mui/material @emotion/react @emotion/styled
+
+A veces los componentes necesitan ser encerrados en un provider para funcinar bien
