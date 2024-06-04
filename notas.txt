@@ -396,3 +396,7 @@ Mocking functions
 -----------------
 Para hacer un mock puedo usar jest.fn
 const incrementHanler = jest.fn()
+
+Mocking HTTP requests
+---------------------
+Para mockear los requests http se usa la libreria msw (se pobtiene de mswjs.io)
