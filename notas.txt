@@ -391,3 +391,8 @@ y el result tiene un current que tien todas las propiedades
 Act Utility
 -----------
 Act es una funcion que se asegura de que se hicieron todos los updates anted de que se hagan los asserts.
+
+Mocking functions
+-----------------
+Para hacer un mock puedo usar jest.fn
+const incrementHanler = jest.fn()
