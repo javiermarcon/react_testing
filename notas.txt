@@ -371,3 +371,12 @@ Material UI provee widgets
 npm install @mui/material @emotion/react @emotion/styled
 
 A veces los componentes necesitan ser encerrados en un provider para funcinar bien
+
+Custom render functions
+-----------------------
+
+Para hacer un custom render, podemos sacar el codigo de 
+testing-library.com -> Docs -> Frameworks -> React Testing Library -> Setup -> Custom render
+
+Seteando ese wrapper e importando del wrapper que seteamos, nos evitamos poner el wrapper en 
+cada test.
