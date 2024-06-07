@@ -427,3 +427,12 @@ Testing checks if your code works or not, whereas static analysis checks if it i
 - Prettier
 - Husky
 - lint-staged
+
+ESlint
+------
+
+ESlint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code,
+with the goal of making code more consistent and avoiding bugs
+
+Para usarlo instalar la extension ESlint de visual studio code.
+
