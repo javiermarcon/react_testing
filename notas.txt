@@ -449,3 +449,9 @@ Para que grabe los cambios de preetier cuando se guarda un archivo, instalar la 
 e ir a file_=> Preferences (o apretar CTRL + ,)[control + coma] boscar formaton y habilitar format on save
 
 npm install -D eslint-config-prettier
+
+Husky
+-----
+Husky is a tool that helps improve your commits and more
+
+npx husky-init && npm install
