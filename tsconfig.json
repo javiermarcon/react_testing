@@ -18,9 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"]
   },
   "include": [
     "src"
-  ]
+, "vitest.config.ts", "jest.setup.ts", "jest.polyfills.ts", "jest.config.ts", "msw.polyfills.js"  ]
 }

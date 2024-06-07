@@ -1,6 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { CounterTwo } from "./counter-two";
 import user from "@testing-library/user-event"
+import { describe
+    , expect
+    , test
+    , vi
+     } from 'vitest'
 
 describe("CounterTwo", () => {
     test("renders correctly", () => {
@@ -11,8 +16,8 @@ describe("CounterTwo", () => {
 
     test("handlers are called", async () => {
         user.setup()
-        const incrementHanler = jest.fn()
-        const decrementHandler = jest.fn()
+        const incrementHanler = vi.fn()
+        const decrementHandler = vi.fn()
         render(<CounterTwo count={0}
             handleIncrement={incrementHanler}
             handleDecrement={decrementHandler}
