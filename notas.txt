@@ -406,3 +406,24 @@ npm install msw@latest --save-dev
 
 Despues copiar la parte de integrate
 
+Static analysis testing
+-----------------------
+
+Process of verifying that your code meets certain expectations without actually running it
+- Ensure consistent style and formatting
+- Check for common mistakes and possible bugs
+- Limit the consistency of code
+- Verify type consistency
+
+All types of tests run the code and then compare the outcome against known expected outputs to see 
+if everything works ok
+Static testing analyses aspects such as readability, consistency, error handling, type checking, 
+and alignment with best practices
+
+Testing checks if your code works or not, whereas static analysis checks if it is written well or not
+
+- typescript
+- ESlint
+- Prettier
+- Husky
+- lint-staged
