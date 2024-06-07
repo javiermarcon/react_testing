@@ -2,8 +2,8 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
-import { server } from './mocks/server'
+import "@testing-library/jest-dom";
+import { server } from "./mocks/server";
 
 /**
  * @note The block below contains polyfills for Node.js globals
@@ -15,15 +15,15 @@ import { server } from './mocks/server'
  * you don't want to deal with this.
  */
 
-const { TextDecoder, TextEncoder } = require('node:util')
+const { TextDecoder, TextEncoder } = require("node:util");
 
 Object.defineProperties(globalThis, {
   TextDecoder: { value: TextDecoder },
   TextEncoder: { value: TextEncoder },
-})
+});
 
-const { Blob } = require('node:buffer')
-const { fetch, Headers, FormData, Request, Response } = require('undici')
+const { Blob } = require("node:buffer");
+const { fetch, Headers, FormData, Request, Response } = require("undici");
 
 Object.defineProperties(globalThis, {
   fetch: { value: fetch, writable: true },
@@ -32,21 +32,21 @@ Object.defineProperties(globalThis, {
   FormData: { value: FormData },
   Request: { value: Request },
   Response: { value: Response },
-})
+});
 
 beforeAll(() => {
   // Enable API mocking before all the tests.
-  server.listen()
-})
+  server.listen();
+});
 
 afterEach(() => {
   // Reset the request handlers between each test.
   // This way the handlers we add on a per-test basis
   // do not leak to other, irrelevant tests.
-  server.resetHandlers()
-})
+  server.resetHandlers();
+});
 
 afterAll(() => {
   // Finally, disable API mocking after the tests are done.
-  server.close()
-})
+  server.close();
+});
