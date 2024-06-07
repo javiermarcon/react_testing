@@ -33,6 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "vitest",
+    "stest": "vitest run",
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*{ts,tsx,css,scss}\"",
@@ -75,16 +76,21 @@
     "@vitest/coverage-v8": "^1.6.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest-dom": "^5.4.0",
+    "husky": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.5",
     "msw": "^2.3.1",
-    "vitest": "^1.6.0",
-    "husky": "^8.0.0"
+    "vitest": "^1.6.0"
   },
   "msw": {
     "workerDirectory": [
       "src"
     ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["eslint"],
+    "*.{ts,tsx,css,scss}": ["prettier --write"]
   }
 }

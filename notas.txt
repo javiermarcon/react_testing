@@ -455,3 +455,9 @@ Husky
 Husky is a tool that helps improve your commits and more
 
 npx husky-init && npm install
+
+# para que ponga el pre-commit sol en los archivos que estan por comitearse
+npm install -D lint-staged
+
+# para que corra los tests antes de pushear
+npx husky add .husky/pre-push "npm test -- --watchAll=false"
